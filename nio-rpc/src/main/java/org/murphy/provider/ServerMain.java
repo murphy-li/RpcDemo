@@ -1,4 +1,4 @@
-package org.murphy.server;
+package org.murphy.provider;
 
 import java.io.IOException;
 

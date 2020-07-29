@@ -1,6 +1,6 @@
-package org.murphy.client;
+package org.murphy.consumer;
 
-import service.DataService;
+import org.murphy.service.DataService;
 
 public class ClientMain {
     public static void main(String[] args) {

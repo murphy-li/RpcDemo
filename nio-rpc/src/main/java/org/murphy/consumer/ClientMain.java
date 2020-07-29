@@ -1,11 +1,8 @@
-package org.murphy.client;
-
-import service.DataService;
+package org.murphy.consumer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
 
 public class ClientMain {

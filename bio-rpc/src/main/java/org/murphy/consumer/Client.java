@@ -1,9 +1,9 @@
-package org.murphy.client;
+package org.murphy.consumer;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-import service.DataService;
+import org.murphy.service.DataService;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 注册应用，和provider的名称不相同 -->
+    <dubbo:application name="provider"/>
+    <!-- 使用广播注册中心，广播自己的服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <!-- 使用dubbo协议在20880端口暴露dubbo服务-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!-- 暴本地bean -->
+    <bean id="dataService" class="org.murphy.service.impl.DataServiceImpl" />
+    <!-- 增加暴露远程服务配置 -->
+    <dubbo:service interface="org.murphy.service.DataService" ref="dataService" />
+</beans>

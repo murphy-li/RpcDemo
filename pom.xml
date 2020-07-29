@@ -12,6 +12,7 @@
         <module>base</module>
         <module>bio-rpc</module>
         <module>nio-rpc</module>
+        <module>dubbo-rpc</module>
     </modules>
 
 

@@ -1,4 +1,4 @@
-package org.murphy.server;
+package org.murphy.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import java.io.IOException;
 
 @SpringBootConfiguration
-@ComponentScan(basePackages = {"org.murphy.service", "org.murphy.server"})
+@ComponentScan(basePackages = {"org.murphy.service", "org.murphy.provider"})
 public class ServerMain {
     public static void main(String[] args) throws IOException {
         ApplicationContext applicationContext = SpringApplication.run(ServerMain.class);
