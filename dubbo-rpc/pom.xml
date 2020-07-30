@@ -8,7 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <properties>
+        <maven.compile.source>1.8</maven.compile.source>
+        <maven.compile.target>1.8</maven.compile.target>
+        <maven.compile.compiler>1.8</maven.compile.compiler>
+    </properties>
     <artifactId>dubbo-rpc</artifactId>
     <dependencies>
         <dependency>

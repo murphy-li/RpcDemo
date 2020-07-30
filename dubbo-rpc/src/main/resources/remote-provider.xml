@@ -6,8 +6,11 @@
 
     <!-- 注册应用，和provider的名称不相同 -->
     <dubbo:application name="provider"/>
-    <!-- 使用广播注册中心，广播自己的服务地址 -->
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <!-- 使用zk注册中心-->
+<!--    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>-->
+    <!--    组播-->
+    <dubbo:registry  address="multicast://225.0.0.7:1234" >
+    </dubbo:registry>
     <!-- 使用dubbo协议在20880端口暴露dubbo服务-->
     <dubbo:protocol name="dubbo" port="20880"/>
 

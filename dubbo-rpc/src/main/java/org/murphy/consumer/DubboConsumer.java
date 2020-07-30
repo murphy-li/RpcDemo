@@ -4,7 +4,7 @@ package org.murphy.consumer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.murphy.service.DataService;
 
-public class Consumer {
+public class DubboConsumer {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[] { "remote-consumer.xml" });

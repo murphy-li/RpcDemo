@@ -3,7 +3,7 @@ package org.murphy.provider;
 import java.io.IOException;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-public class Provider {
+public class DubboProvider {
 
     public static void main(String[] args) throws IOException {
 

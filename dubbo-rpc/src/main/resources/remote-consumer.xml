@@ -6,10 +6,15 @@
 
     <!-- 注册应用，和provider的名称不相同 -->
     <dubbo:application name="consumer"/>
-    <!-- 使用广播注册中心来发现服务 -->
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <!-- 使用zk注册中心-->
+<!--    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>-->
+<!--    组播-->
+    <dubbo:registry  address="multicast://225.0.0.7:1234" >
+        <dubbo:parameter key="unicast" value="false" />
+    </dubbo:registry>
     <!-- generate proxy for the remote org.murphy.service, then demoService can be used in the same way as the
     local regular interface -->
     <!-- 生成远程的 org.murphy.service.DataServic 代理，然后dataService能够被当作本地的常规接口来调用 -->
+<!--    引用服务端的同名服务-->
     <dubbo:reference id="dataService" check="false" interface="org.murphy.service.DataService"/>
 </beans>

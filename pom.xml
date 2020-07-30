@@ -13,6 +13,7 @@
         <module>bio-rpc</module>
         <module>nio-rpc</module>
         <module>dubbo-rpc</module>
+        <module>netty-rpc</module>
     </modules>
 
 
